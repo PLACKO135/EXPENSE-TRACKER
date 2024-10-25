@@ -1,7 +1,15 @@
-
+import Header from "./components/Header"
+import Balance from "./components/Balance"
+import Transactionlist from "./components/transactionlist"
+import Addtransaction from "./components/Addtransaction"
 const App = () => {
   return (
-    <div>App</div>
+  <>
+    <Header/>
+    <Balance/>
+    <Transactionlist/>
+    <Addtransaction/>
+  </>
   )
 }
 
