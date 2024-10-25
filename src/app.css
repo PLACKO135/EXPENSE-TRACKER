@@ -22,10 +22,12 @@ h1 {
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
+
 .balanceContainer {
     margin-bottom: 15px;
 }
-.balanceContainer h4{
+
+.balanceContainer h4 {
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
@@ -37,9 +39,72 @@ h1 {
     background-color: white;
     padding: 20px;
     padding: 20px;
-    box-shadow: 8px 8px 8px rgb(196, 195, 100);
+    box-shadow: 8px 8px 8px rgb(168, 168, 147);
 }
+
 .incExpContainer div {
     text-align: center;
     align-items: center;
+    padding: 10px;
+}
+
+.p {
+    font-weight: 800;
+
+}
+
+.list li {
+    list-style: none;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 8px 8px 8px rgb(168, 168, 147);
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+label{
+    margin: 10px;
+    display: inline-block;
+}
+
+.delete {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px 5px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.list li:hover .delete {
+    opacity: 1;
+}
+
+.minus {
+    border-right: 3px solid red;
+}
+
+.plus {
+    border-right: 3px solid green;
+}
+
+input[type="text"] , input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn{
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: 0px 8px 8px rgba(194, 194, 175, 0.733);
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+    color: white;
 }
