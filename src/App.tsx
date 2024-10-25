@@ -1,16 +1,20 @@
-import Header from "./components/Header"
+import AddTransaction from "./components/Addtransaction"
 import Balance from "./components/Balance"
-import Transactionlist from "./components/transactionlist"
-import Addtransaction from "./components/Addtransaction"
+import Header from "./components/Header"
+import TransactionList from "./components/transactionlist"
+import './App.css'
+import IncomeExpense from "./components/INCOMEExpense"
+
 const App = () => {
-  return (
-  <>
-    <Header/>
-    <Balance/>
-    <Transactionlist/>
-    <Addtransaction/>
-  </>
-  )
+    return (
+        <div className="container">
+            <Header />
+            <Balance />
+            <IncomeExpense />
+            <TransactionList />
+            <AddTransaction />
+        </div>
+    )
 }
 
 export default App

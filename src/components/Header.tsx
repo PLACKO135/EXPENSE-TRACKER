@@ -1,8 +1,8 @@
-
-
 const Header = () => {
   return (
-    <div>Expanse Tracker</div>
+    <div>
+        <h1>Expense Tracker</h1>
+    </div>
   )
 }
 
