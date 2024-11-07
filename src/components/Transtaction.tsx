@@ -1,3 +1,6 @@
+import { useContext } from "react"
+import { GlobalContext } from "./GlobalContext/GlobalContext"
+
 type transactionProps ={
     id:number,
     Text:string,
@@ -5,7 +8,10 @@ type transactionProps ={
 }
 
 const Transaction = (props:transactionProps) => {
-  return (
+  
+    const {deltra}=useContext(GlobalContext)
+
+    return (
       
               <li className={props.amount>0?'plus':'minus'}>
                   {props.Text}
@@ -14,7 +20,7 @@ const Transaction = (props:transactionProps) => {
                     $
                     {Math.abs(props.amount)}
                     </span>
-                  <button className="delete">X</button>
+                  <button onClick={()=>deltra(props.id)} className="delete">✖</button>
               </li>
       
   )
