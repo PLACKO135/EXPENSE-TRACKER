@@ -12,7 +12,8 @@ amount:number
 
 type Globalstate={
   transactions:transactiontype[],
-  deltra:(id:number)=>void
+  deltra:(id:number)=>void,
+  addtra:(transaction:transactiontype)=>void
 }
 
 const initialState={transactions:[{id:1,Text:'Flowers', amount:-30},
@@ -23,7 +24,8 @@ const initialState={transactions:[{id:1,Text:'Flowers', amount:-30},
 export const GlobalContext=createContext<Globalstate>(
   {
   transactions:initialState.transactions,
-  deltra:()=>{}
+  deltra:()=>{},
+  addtra:()=>{}
 })
 
 const GlobalProvider = ({children}:childrenProps) => {
@@ -32,9 +34,12 @@ const GlobalProvider = ({children}:childrenProps) => {
 
     const deltra=(id:number)=>{setTransaction(transactions.filter(transaction=>transaction.id!==id))}
 
+
+    const addtra=(transaction:transactiontype)=>{setTransaction(prev=>([...prev,transaction]))}
+
     return (
    
-<GlobalContext.Provider value={{transactions,deltra}}>
+<GlobalContext.Provider value={{transactions,deltra,addtra}}>
     {children}
 </GlobalContext.Provider>
    
